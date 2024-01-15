@@ -1,4 +1,8 @@
-
+#run the below commands before running this script.
+# OPENAI_API_KEY must be present in the env
+#pip3 install langchain pymongo bs4 openai tiktoken gradio requests lxml argparse unstructured
+#pip3 install -U langchain-openai
+#pip3 install -U langchain-community
 import pandas as pd
 from openai import OpenAI, AzureOpenAI
 import openai
