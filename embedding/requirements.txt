@@ -3,9 +3,5 @@ python-dotenv
 openai
 sentence-transformers
 pymongoarrow
-json
-os
-re
 tiktoken
-io
 
