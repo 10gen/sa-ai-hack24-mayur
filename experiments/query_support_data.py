@@ -23,7 +23,24 @@ embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
 
 # Initialize the Vector Store
 
-vectorStore = MongoDBAtlasVectorSearch( collection, embeddings )
+vectorStore = MongoDBAtlasVectorSearch( collection = collection, embedding = embeddings, 
+                                       text_key = 'combined', 
+                                       embedding_key = 'embedding_combined', index_name='combined_qa' )
+
+
+def create_vector_search():
+    """
+    Creates a MongoDBAtlasVectorSearch object using the connection string, database, and collection names, along with the OpenAI embeddings and index configuration.
+
+    :return: MongoDBAtlasVectorSearch object
+    """
+    vector_search = MongoDBAtlasVectorSearch.from_connection_string(
+        MONGO_URI,
+        f"{dbName}.{collectionName}",
+        OpenAIEmbeddings(),
+        index_name="combined_qa"
+    )
+    return vector_search
 
 def query_data(query):
     # Convert question to vector using OpenAI embeddings
