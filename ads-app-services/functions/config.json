@@ -3,9 +3,5 @@
         "name": "get_sentiment",
         "private": false,
         "run_as_system": true
-    },
-    {
-        "name": "resetFunc",
-        "private": true
     }
 ]
