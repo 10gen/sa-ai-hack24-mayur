@@ -1,0 +1,8 @@
+{
+    "app_id": "sa-genai-hackathon24-rkrce",
+    "config_version": 20210101,
+    "name": "SA-GenAI-Hackathon24",
+    "provider_region": "azure-westus",
+    "deployment_model": "LOCAL",
+    "environment": "development"
+}
