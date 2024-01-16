@@ -43,11 +43,12 @@ exports = async function(arg){
   
     
     var collection = context.services.get(serviceName).db(dbName).collection(collName);
-    const findResult = async () => {
+    const insertResult = async () => {
      await collection.insertOne(data);
     }
     
-    findResult();
+    //insertResult(); commented out to prevent recursive write
+    
 
   
       
