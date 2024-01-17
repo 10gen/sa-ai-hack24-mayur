@@ -5,6 +5,8 @@ exports = async function(arg){
 
   // Find the name of the MongoDB service you want to use (see "Linked Data Sources" tab)
   var serviceName = "mongodb-atlas";
+  console.log(arg);
+  throw new Error(arg);
 
   // Update these to reflect your db/collection
   var dbName = "support";
