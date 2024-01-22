@@ -1,7 +1,0 @@
-pymongo
-python-dotenv
-openai
-sentence-transformers
-pymongoarrow
-tiktoken
-
